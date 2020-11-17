@@ -1,5 +1,4 @@
-call plug#begin()
-
+call plug#begin() 
 " Linter
 Plug 'dense-analysis/ale'
 
@@ -37,50 +36,57 @@ nmap <leader>qf <Plug>(coc-fix-current)
 
 noremap <leader><leader> <c-^>
 
-Plug 'neoclide/coc-tsserver', 	{ 'do': 'yarn install --frozen-lockfile' } 
-Plug 'neoclide/coc-highlight', 	{ 'do': 'yarn install --frozen-lockfile' }
-Plug 'neoclide/coc-yaml', 	{ 'do': 'yarn install --frozen-lockfile' }
-Plug 'neoclide/coc-rls', 	{ 'do': 'yarn install --frozen-lockfile' }
-Plug 'neoclide/coc-emmet', 	{ 'do': 'yarn install --frozen-lockfile' }
-Plug 'neoclide/coc-html', 	{ 'do': 'yarn install --frozen-lockfile' }
-Plug 'neoclide/coc-vimtex', 	{ 'do': 'yarn install --frozen-lockfile' }
-Plug 'neoclide/coc-yank', 	{ 'do': 'yarn install --frozen-lockfile' }
-Plug 'neoclide/coc-pairs', 	{ 'do': 'yarn install --frozen-lockfile' }
-Plug 'neoclide/coc-python', 	{ 'do': 'yarn install --frozen-lockfile' }
-Plug 'neoclide/coc-tabnine', 	{ 'do': 'yarn install --frozen-lockfile' }
-Plug 'neoclide/coc-java', 	{ 'do': 'yarn install --frozen-lockfile' }
-Plug 'neoclide/coc-snippets', 	{ 'do': 'yarn install --frozen-lockfile' }
+Plug 'neoclide/coc-tsserver', 		{ 'do': 'yarn install --frozen-lockfile' } 
+Plug 'neoclide/coc-highlight', 		{ 'do': 'yarn install --frozen-lockfile' }
+Plug 'neoclide/coc-yaml', 		{ 'do': 'yarn install --frozen-lockfile' }
+Plug 'neoclide/coc-rls', 		{ 'do': 'yarn install --frozen-lockfile' }
+Plug 'neoclide/coc-emmet', 		{ 'do': 'yarn install --frozen-lockfile' }
+Plug 'neoclide/coc-html', 		{ 'do': 'yarn install --frozen-lockfile' }
+Plug 'neoclide/coc-vimtex', 		{ 'do': 'yarn install --frozen-lockfile' }
+Plug 'neoclide/coc-yank', 		{ 'do': 'yarn install --frozen-lockfile' }
+Plug 'neoclide/coc-pairs', 		{ 'do': 'yarn install --frozen-lockfile' }
+Plug 'neoclide/coc-python', 		{ 'do': 'yarn install --frozen-lockfile' }
+Plug 'neoclide/coc-tabnine', 		{ 'do': 'yarn install --frozen-lockfile' }
+Plug 'neoclide/coc-java', 		{ 'do': 'yarn install --frozen-lockfile' }
+Plug 'neoclide/coc-snippets', 		{ 'do': 'yarn install --frozen-lockfile' }
+Plug 'kkiyama117/coc-toml', 		{ 'do': 'yarn install --frozen-lockfile' }
 Plug 'coc-extensions/coc-svelte', 	{ 'do': 'yarn install --frozen-lockfile' }
 " golang config in coc configfile 
 
 " Snippets
 Plug 'honza/vim-snippets'
 
-" Tpope
+" Tpope <3
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-markdown'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 
-" Router
-Plug 'airblade/vim-router'
+" Router sets root to dir containing .git 
+Plug 'airblade/vim-rooter'
 
-" Fuzzyfinding
+" Fuzzyfinding use ag to make use of .gitignore
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 let $FZF_DEFAULT_COMMAND = 'ag -g ""'
+
+" Ripgrep to serach through all files fast
+Plug 'jremmen/vim-ripgrep'
 
 " Themes
 Plug 'morhetz/gruvbox'
 
-" Sytax highlighting 
-Plug 'leafOfTree/vim-svelte-plugin'
-
-" Codi
+" Codi in teractive interpreter
 Plug 'metakirby5/codi.vim'
 let g:codi#virtual_text_prefix = "> "
 let g:codi#aliases = {
 	\ 'javascript.jsx': 'javascript',
 	\}
+
+" Fancy sttartscreen
+Plug 'mhinz/vim-startify'
+
+" Fancy bar
+Plug 'itchyny/lightline.vim'
 
 call plug#end()
